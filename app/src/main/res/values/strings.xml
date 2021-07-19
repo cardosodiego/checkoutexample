@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">CheckoutExample</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="main_title">PX Integration Examples</string>
+    <string name="hint_item">Informe o produto a ser vendido</string>
+    <string name="hint_quantidade">quantidade:</string>
+    <string name="hint_valor">valor:</string>
+    <string name="chk_excluir_cartao">Excluir cartão de crédito</string>
+    <string name="chk_excluir_debito">Excluir cartão de débito</string>
+    <string name="title_config_pagamento">Configurações de Pagamento:</string>
+    <string name="switch_habilitar_pagto">Habilitar Pagamento Customizado</string>
+    <string name="switch_habilitar_loading">Habilitar Loading Customizado</string>
+    <string name="switch_habilitar_cobranca">Habilitar Cobrança de taxa</string>
+    <string name="lbl_config_avancadas">Configurações Avançadas:</string>
+    <string name="chk_strings_customizadas">Usar strings customizadas</string>
+    <string name="chk_dialog_img">Usar dialog na imagem</string>
+    <string name="chk_screen_customized">Usar tela de resultado customizada</string>
+    <string name="title_btn_compra">Efetuar Compra</string>
+</resources>
