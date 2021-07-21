@@ -15,8 +15,6 @@ class MainViewModel : ViewModel() {
     val checkoutBuilder: MutableLiveData<MercadoPagoCheckout.Builder>
         get() = _checkoutBuilder
 
-    var excludeCreditCard: Boolean = false
-    var excludeDebitCard: Boolean = false
     var useCustomPaymentProcessor: Boolean = false
     var useVisualProcessor: Boolean = false
     var addChargeToCreditCard: Boolean = false
