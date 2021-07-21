@@ -24,8 +24,6 @@ class MainFragment : Fragment() {
     }
 
     private lateinit var viewModel: MainViewModel
-    private lateinit var excludeCreditCard: MaterialCheckBox
-    private lateinit var excludeDebitCard: MaterialCheckBox
     private lateinit var useCustomPayment: SwitchMaterial
     private lateinit var useCustomLoading: SwitchMaterial
     private lateinit var addChargeCredit: SwitchMaterial
@@ -47,7 +45,6 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         setViewAccessors(view)
-        setExcludeCardCheckBoxListener()
         setPaymentConfigurationListeners()
         setAdvancedConfigurations()
         setBtnStartCheckout()
@@ -56,8 +53,6 @@ class MainFragment : Fragment() {
 
     private fun setViewAccessors(view: View) {
         with(view){
-            excludeCreditCard = findViewById(R.id.exclude_credit_card)
-            excludeDebitCard = findViewById(R.id.exclude_debit_card)
             useCustomPayment = findViewById(R.id.switch_custom_payment)
             useCustomLoading = findViewById(R.id.switch_custom_loading)
             addChargeCredit = findViewById(R.id.switch_charge_credit)
@@ -68,15 +63,6 @@ class MainFragment : Fragment() {
         }
     }
 
-    private fun setExcludeCardCheckBoxListener() {
-        excludeCreditCard.setOnCheckedChangeListener{_, isChecked ->
-            viewModel.excludeCreditCard = isChecked
-        }
-        excludeDebitCard.setOnCheckedChangeListener{_, isChecked ->
-            viewModel.excludeDebitCard = isChecked
-        }
-    }
-
     private fun setPaymentConfigurationListeners() {
         useCustomPayment.setOnCheckedChangeListener { _, isChecked ->
             viewModel.useCustomPaymentProcessor = isChecked
@@ -84,6 +70,7 @@ class MainFragment : Fragment() {
             useCustomLoading.isEnabled = isChecked
             addChargeCredit.isChecked = false
             addChargeCredit.isEnabled = isChecked
+
         }
         useCustomLoading.setOnCheckedChangeListener { _, isChecked ->
             viewModel.useVisualProcessor = isChecked

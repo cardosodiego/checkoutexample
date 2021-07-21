@@ -16,5 +16,5 @@
     <string name="chk_strings_customizadas">Usar strings customizadas</string>
     <string name="chk_dialog_img">Usar dialog na imagem</string>
     <string name="chk_screen_customized">Usar tela de resultado customizada</string>
-    <string name="title_btn_compra">Efetuar Compra</string>
+    <string name="title_btn_compra">Iniciar</string>
 </resources>
